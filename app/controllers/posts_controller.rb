@@ -1,47 +1,22 @@
 class PostsController < ApplicationController
 
-  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   
-  def new
-  	@post = Post.new
+  def about
   end
 
-  def create
-    @post = Post.new(params[:post].permit(:title, :text))
- 
-    if @post.save
-      redirect_to @post
-    else
-      render 'new'
-    end 
+  def home
   end
 
-  def show
-  	@post = Post.find(params[:id])
+  def goals
   end
 
-  def index
-    @posts = Post.all
+  def looking_forward
   end
 
-  def edit
-    @post = Post.find(params[:id])
+  def schedule
   end
 
-  def update
-    @post = Post.find(params[:id])
- 
-    if @post.update(params[:post].permit(:title, :text))
-      redirect_to @post
-    else
-      render 'edit'
-    end
+  def contact
   end
-
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
- 
-    redirect_to posts_path
-  end
+  
 end
