@@ -14,31 +14,29 @@
 	<div class="navbar">
       <div class="navbar-inner">
         <div class="container">
-        
           <nav>
             <ul class="nav">
-              <li><%= link_to 'Facebook', "http://www.facebook.com/jbvcpublic" %> 
-</li>
+              <li><%= link_to 'Facebook', "http://www.facebook.com/jbvcpublic" %></li>
               <li><%= link_to "Home", posts_index_path %></li>
-               <li> <%= link_to 'About', posts_about_path %></li>
- <li><%= link_to 'Goals', posts_goals_path %></li>
- <li><%= link_to 'Looking Foward', posts_looking_forward_path %></li>
- <li><%= link_to 'Meeting schedule', posts_schedule_path %></li>
- <li><%= link_to 'Contact us', posts_contact_path %></li>
+              <li> <%= link_to 'About', posts_about_path %></li>
+              <li><%= link_to 'Goals', posts_goals_path %></li>
+              <li><%= link_to 'Looking Foward', posts_looking_forward_path %></li>
+              <li><%= link_to 'Meeting schedule', posts_schedule_path %></li>
+              <li><%= link_to 'Contact us', posts_contact_path %></li>
             </ul>
           </nav>
         </div>
       </div>
-      </div>
-      </div>
-    </header>
+    </div>
+  </div>
+</header>
 
 <div class="container">
-<%= yield %>
-<hr />
-<div class="footer">
-<p>&copy; 2013 JBVC. All Rights Reserved.</p>
-</div>
+  <%= yield %>
+  <hr />
+  <div class="footer">
+    <p>&copy; 2013 JBVC. All Rights Reserved.</p>
+  </div>
 </div>
 
 </body>
