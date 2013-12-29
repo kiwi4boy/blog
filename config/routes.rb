@@ -1,4 +1,5 @@
 Blog::Application.routes.draw do
+  devise_for :users, :skip => :registrations
   resources :posts do 
     resources :comments
   end
@@ -8,6 +9,7 @@ Blog::Application.routes.draw do
   get "welcome/looking_forward"
   get "welcome/schedule"
   get "welcome/contact"
+  root "posts#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
