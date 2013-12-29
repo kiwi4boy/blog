@@ -1,13 +1,13 @@
 Blog::Application.routes.draw do
-  #resources :posts do 
-  #  resources :comments
-  #end
-  get "posts/index"
-  get "posts/about"
-  get "posts/goals"
-  get "posts/looking_forward"
-  get "posts/schedule"
-  get "posts/contact"
+  resources :posts do 
+    resources :comments
+  end
+  get "welcome/index"
+  get "welcome/about"
+  get "welcome/goals"
+  get "welcome/looking_forward"
+  get "welcome/schedule"
+  get "welcome/contact"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,17 +1,15 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+
  
+<h2><%= @post.title %></h2>
+ <p><%= @post.created_at.strftime("%B %d, %Y") %></p>
 <p>
-  <strong>Text:</strong>
-  <%= @post.text %>
+  <%= raw @post.text %>
 </p>
 
-<h2>Comments</h2>
+<h4>Comments</h4>
 <%= render @post.comments %>
 
-<h2>Add a comment:</h2>
+<h4>Add a comment:</h4>
 <%= render "comments/form" %>
 
 <%= link_to 'Back', posts_path %>

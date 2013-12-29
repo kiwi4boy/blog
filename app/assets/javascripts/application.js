@@ -17,4 +17,4 @@
 //= require bootstrap
 //= require fullcalendar
 //= require gcal
-
+//= require bootstrap-wysihtml5

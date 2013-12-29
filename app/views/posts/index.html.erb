@@ -1,16 +1,12 @@
-<%= render "head" %>
-<div class="row">
-<div class="span8">
-<h2>Background</h2>
 
-<p>The ministry is founded by a Christian who has personally gone from being sighted to visually impaired. Being called by the Lord to become a pastor from an IT professional in this journey, he now turns around to help others to overcome the journey of becoming visual impaired and live a fulfilling life with dignity. More critically, he wants to go beyond friendship and share the love of Jesus that he discovered in his lived experience with people who are affected by visual impairments.</p>
+<%= link_to 'New post', new_post_path %>
+<% @posts.each do |post| %>
+<h2><%= post.title %></h2>
+<p><%= post.created_at.strftime("%B %d, %Y") %></p>
+<%= raw post.text %>
 
-<h2>背景</h2>
-
-<p>這事工是由一位經歷過從視全以至在1983年完全失明的基督徒開始的。蒙神呼招的他，希望透過自己克服視障的經歷，幫助那些同樣經歷的人士能夠克服視障的困難、過著有尊嚴的生活。他更盼望藉這團契向他這班人士分享耶穌基督的愛。</p>
-
-</div>
-<div class="span4">
-<%= render "end" %>
-</div>
-</div>
+<%= link_to 'Show', post_path(post) %>
+<%= link_to 'Edit', edit_post_path(post) %>
+<%= link_to 'Destroy', post_path(post),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>

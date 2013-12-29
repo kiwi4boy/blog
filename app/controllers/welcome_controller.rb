@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def about
   end
 
-  def home
+  def index
   end
 
   def goals
